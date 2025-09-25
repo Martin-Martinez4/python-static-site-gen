@@ -9,10 +9,10 @@ base_path = "./"
 if len(sys.argv) > 1:
     base_path = sys.argv[1]
 
-dir_path_static = base_path + "static"
-dir_path_public = base_path + "docs"
-dir_path_content = base_path + "content"
-template_path = base_path + "template.html"
+dir_path_static = "static"
+dir_path_public = "docs"
+dir_path_content = "content"
+template_path = "template.html"
 
 
 
