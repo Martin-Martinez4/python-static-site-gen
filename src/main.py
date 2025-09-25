@@ -1,13 +1,19 @@
 import os
+import sys
 import shutil
 
 from copystatic import copy_files_recursive
 from gencontent import generate_page, generate_pages_recursive
 
-dir_path_static = "./static"
-dir_path_public = "./public"
-dir_path_content = "./content"
-template_path = "./template.html"
+base_path = "/"
+if len(sys.argv) > 1:
+    base_path = sys.argv[1]
+
+dir_path_static = base_path + "static"
+dir_path_public = base_path + "docs"
+dir_path_content = base_path + "content"
+template_path = base_path + "template.html"
+
 
 
 def main():
@@ -23,6 +29,7 @@ def main():
         os.path.join(dir_path_content),
         template_path,
         os.path.join(dir_path_public),
+        base_path
     )
 
 
