@@ -5,7 +5,7 @@ import shutil
 from copystatic import copy_files_recursive
 from gencontent import generate_page, generate_pages_recursive
 
-base_path = "/"
+base_path = "./"
 if len(sys.argv) > 1:
     base_path = sys.argv[1]
 
